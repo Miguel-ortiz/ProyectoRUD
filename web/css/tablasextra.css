@@ -1,0 +1,283 @@
+/* tables */
+table {
+    font-family: sans-serif;
+    text-align: left;
+    background: none;
+}
+table thead tr th{
+    font-size: 12px;
+    text-align: left;
+    background: none;
+}
+table tbody tr th{
+    font-size: 12px;
+    text-align: left;
+    //background: none;
+    text-align: center;
+}
+table tr td, table tr th{    
+    padding: 0px 0px;   
+    text-align: left;
+    background: #999;
+    font-size: 10px;
+    border-color: #fff;;
+    background-image: url(images/bg25px.png);
+}
+
+
+table tbody tr.odd td {
+    /*background-color:#F0F0F6;*/
+}
+
+table.tablesorter {
+    font-family: sans-serif;
+    font-size: 12px;
+    background-color: #CDCDCD;
+    width: 100%;
+    text-align: left;
+    margin: auto;
+}
+
+table.tablesorter thead tr th, table.tablesorter tfoot tr th {
+    color: #000;
+    background-color: #e6EEEE;
+    border: 1px solid #FFF;
+    font-size: 12px;
+    text-align: center;
+    background-image: url(images/bg25px.png);
+}
+
+table.tablesorter tfoot tr th.left {
+    text-align: left;
+}
+
+table.tablesorter thead tr td, table.tablesorter tfoot tr td{
+    background-color: #FFF;
+    border: 1px solid #FFF;
+    font-size: 10px;
+    text-align: center;
+    font-weight: bolder;
+}
+
+table.tablesorter thead tr.td_blanco td{
+    background-color: #FFF;
+    border: none;
+    font-size: 8pt;
+    text-align: center;
+    font-weight: normal;
+}
+
+table.tablesorter thead tr td{
+    background-color: #EFEFEF;
+}
+table.tablesorter thead tr.td_titulo td{
+    background-color: #ecf0df;
+    color: #000;
+    font-weight: bolder;
+}
+
+table.tablesorter thead tr .header {
+    background-image: url(../images/bg.gif);
+    background-repeat: no-repeat;
+    background-position: center right;
+    cursor: pointer;
+}
+
+table.tablesorter tbody td {
+    color: #3D3D3D;
+    background-color: #FFF;
+    vertical-align: middle;
+    border: 1px solid #FFF;
+    padding: 0px;
+    font-size: 11px;
+    line-height: 130%;
+}
+
+
+table.tablesorter tbody tr.odd td {
+    background-color:#EDEDEC;
+}
+table.tablesorter thead tr .headerSortUp {
+    background-image: url(../images/asc.gif);
+}
+table.tablesorter thead tr .headerSortDown {
+    background-image: url(../images/desc.gif);
+}
+table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
+    background-color: #8dbdd8;
+}
+
+table tbody tr.bg1 td{
+    background-color: #EDEDEC;
+}
+
+table tbody tr.bg2 td{
+    background-color: #fffefe;
+}
+
+table tbody tr.rojo td{
+    color: #b83400;
+}
+
+.tablapamplona{
+    margin-left: 5px;
+}
+
+
+.fondo_celda_1 {/*fondo primera celda - titulos de tabla generalmente*/
+    background-color: #5AB530;
+}
+
+table input[type="text"]{
+    width: 95%;
+    margin: auto;
+}
+
+table tr td input[type="text"], table tr th input[type="text"]{
+    width: 95%;
+    margin: 0 auto;
+}
+
+table tr td input[type="text"].fecha{
+    width: 45%;
+    float: left;
+}
+
+table select{
+    width: 95%;
+    margin: auto;
+}
+
+.conteo{
+    height: 10px;
+    width: 10px;
+}
+
+.moneda{
+    text-align: right;
+}
+
+
+table thead tr td{
+    text-align: center;
+}
+
+
+.ingreso{
+    border: 1px double #5BB530;
+    font-family: Tahoma,Geneva,Kalimati,sans-serif;
+}
+
+.ingreso thead tr th{
+    background: #5BB530;
+    color: #FFF;
+    height: 22px;
+}
+
+.ingreso tbody tr th{
+    padding: 5px;
+}
+
+td label{
+    text-align: left;
+    height: 15px;
+    font-size: 12px;
+}
+td label input[type="checkbox"]{
+    margin-right: 3px;
+}
+
+#tdocumentos{
+    font-family:arial;
+    background-color: #CDCDCD;
+    margin:0px 0px;
+    font-size: 8pt;
+    text-align: left;
+}
+
+#tdocumentos thead tr th{
+    background-color: #e6EEEE;
+    border: 1px solid #FFF;
+    font-size: 8pt;
+    padding: 4px;
+}
+
+.file_download_template td{
+    color: #3D3D3D;
+    padding: 4px;
+    background-color: #FFF;
+    vertical-align: top;
+}
+
+table.tablesimple {
+    font-family: sans-serif;
+    background-color: #CDCDCD;
+    margin:0px 5px;
+    font-size: 8pt;
+    width: 99%;
+    text-align: left;
+}
+table.tablesimple thead tr th, table.tablesimple tfoot tr th {
+    background-color: #e6EEEE;
+    border: 1px solid #FFF;
+    font-size: 8pt;
+    padding: 2px;
+    text-align: center;
+}
+table.tablesimple thead tr td{
+    background-color: #FFF;
+    border: 1px solid #FFF;
+    font-size: 8pt;
+    padding: 2px;
+}
+table.tablesimple thead tr .header {
+    background-image: url(../images/bg.gif);
+    background-repeat: no-repeat;
+    background-position: center right;
+    cursor: pointer;
+}
+
+table.tablesimple tbody td {
+    color: #3D3D3D;
+    padding: 2px;
+    background-color: #FFF;
+    vertical-align: top;
+}
+
+
+table.tablesimple tbody .tardios td {
+    color: #cc3300;
+}
+
+
+table.tablesimple.center td {
+    text-align: left;
+}
+table.tablesimple.center th {
+    text-align: right;
+}
+
+
+table.tablesimple tfoot td {
+    color: #3D3D3D;
+    padding: 2px;
+    background-color: #FFF;
+    vertical-align: top;
+}
+
+table.tablesimple tbody tr.odd td {
+    background-color:#F0F0F6;
+}
+table.tablesimple thead tr .headerSortUp {
+    background-image: url(../images/asc.gif);
+}
+table.tablesimple thead tr .headerSortDown {
+    background-image: url(../images/desc.gif);
+}
+table.tablesimple thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
+    background-color: #8dbdd8;
+}
+
+table.newtable td {
+    text-align: center;
+}
