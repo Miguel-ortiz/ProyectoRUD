@@ -1,0 +1,41 @@
+Fecha;Hora;Usuario;Tabla;Funcion;Accion;id_registro 
+14/2/2018;10:23:30;Conexión a base de datos jdbc/Regafectados OK 
+14/2/2018;10:28:48;Conexión a base de datos jdbc/Regafectados OK 
+14/2/2018;11:34:55;Conexión a base de datos jdbc/Regafectados OK 
+14/2/2018;11:34:55;1;;INGRESA DESDE IP ;0:0:0:0:0:0:0:1
+14/2/2018;11:34:56;1;;INGRESA A JSP ;http://localhost:8080/ProyectoRUD/menu/index.jsp
+14/2/2018;11:34:58;1;;INGRESA A JSP ;http://localhost:8080/ProyectoRUD/registro/for_reg_per.jsp
+14/2/2018;11:35:0;1;;INGRESA A JSP ;http://localhost:8080/ProyectoRUD/menu/index.jsp
+14/2/2018;11:35:2;ctr 0 null
+14/2/2018;11:35:2;1
+14/2/2018;11:35:2;1;;INGRESA A JSP ;http://localhost:8080/ProyectoRUD/personas/per_reg_reg.jsp
+14/2/2018;11:35:7;1;;INGRESA A JSP ;http://localhost:8080/ProyectoRUD/menu/index.jsp
+14/2/2018;11:35:41;ctr 0 null
+14/2/2018;11:35:41;1
+14/2/2018;11:35:41;1;;INGRESA A JSP ;http://localhost:8080/ProyectoRUD/personas/per_reg_reg.jsp
+14/2/2018;11:40:24;Conexión a base de datos jdbc/Regafectados OK 
+14/2/2018;11:40:24;1;;INGRESA DESDE IP ;0:0:0:0:0:0:0:1
+14/2/2018;11:40:24;1;;INGRESA A JSP ;http://localhost:8080/ProyectoRUD/menu/index.jsp
+14/2/2018;11:40:25;ctr 0 null
+14/2/2018;11:40:25;Miguel Ortiz
+14/2/2018;11:40:25;1;;INGRESA A JSP ;http://localhost:8080/ProyectoRUD/registro/for_reg_per.jsp
+14/2/2018;11:40:58;1;;INGRESA A JSP ;http://localhost:8080/ProyectoRUD/menu/index.jsp
+14/2/2018;11:41:0;ctr 0 null
+14/2/2018;11:41:0;1
+14/2/2018;11:41:0;1;;INGRESA A JSP ;http://localhost:8080/ProyectoRUD/personas/per_reg_reg.jsp
+14/2/2018;11:41:2;1;;INGRESA A JSP ;http://localhost:8080/ProyectoRUD/menu/index.jsp
+14/2/2018;11:41:3;ctr 0 null
+14/2/2018;11:41:3;Miguel Ortiz
+14/2/2018;11:41:3;1;;INGRESA A JSP ;http://localhost:8080/ProyectoRUD/bienes/bie_reg_bia.jsp
+14/2/2018;11:41:5;1;;INGRESA A JSP ;http://localhost:8080/ProyectoRUD/menu/index.jsp
+14/2/2018;11:41:10;ctr 0 null
+14/2/2018;11:41:10;Miguel Ortiz
+14/2/2018;11:41:10;1;;INGRESA A JSP ;http://localhost:8080/ProyectoRUD/cultivos/cul_reg_rcp.jsp
+14/2/2018;11:41:11;1;;INGRESA A JSP ;http://localhost:8080/ProyectoRUD/menu/index.jsp
+14/2/2018;12:5:55;Conexión a base de datos jdbc/Regafectados OK 
+14/2/2018;12:5:55;1;;INGRESA DESDE IP ;0:0:0:0:0:0:0:1
+14/2/2018;12:5:57;1;;INGRESA A JSP ;http://localhost:8080/ProyectoRUD/menu/index.jsp
+14/2/2018;12:6:0;ctr 0 null
+14/2/2018;12:6:0;1
+14/2/2018;12:6:0;1;;INGRESA A JSP ;http://localhost:8080/ProyectoRUD/registro/for_reg_per.jsp
+14/2/2018;12:6:53;1;;INGRESA A JSP ;http://localhost:8080/ProyectoRUD/menu/index.jsp

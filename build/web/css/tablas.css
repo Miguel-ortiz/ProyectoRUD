@@ -1,0 +1,158 @@
+/* tables */
+/*table {
+    font-family: sans-serif;
+    font-size: 13px;
+    background-color: #FFFFFF;
+    text-align: left;
+}*/
+
+hr{
+  
+   background: #3D3D3D; 
+    
+    
+}
+
+.tcronograma{
+    width: 100%;
+}
+.tcronograma thead td, .tcronograma thead th, .tcronograma tbody th, .tcronograma tbody td{
+    border: 1px solid #3D3D3D;
+    font-size: 9px;
+    font-family: sans-serif;
+    width: 1%;
+}
+
+.td-cronograma{
+    background: #d5d59d;
+}
+.td-cronograma:hover{
+    background: #8dbdd8;
+    cursor: pointer;
+}
+.td-cronograma-reprogramacion {
+    background: #0000ff;
+}
+td-cronograma-reprogramacion:hover{
+    background: #8dbdd8;
+    cursor: pointer;
+}
+
+
+table thead tr th{
+    font-size: 11px;
+    text-align: center;
+}
+
+table thead tr th {
+    background-color:#F0F0F6;
+    border: 1px solid #FFF;
+}
+table thead tr td {
+    background-color:#FFF;
+    border: 1px solid #FFF;
+}
+
+table.tablesorter {
+    font-family: sans-serif;
+    font-size: 11px;
+    background-color: #CDCDCD;
+    width: 100%;
+    text-align: left;
+}
+table.tablesorter thead tr th, table.tablesorter tfoot tr th {
+    background-color: #e6EEEE;
+    border: 1px solid #FFF;
+    font-size: 8pt;
+    text-align: center;
+}
+
+table.tablesorter thead tr td, table.tablesorter tfoot tr td{
+    background-color: #FFF;
+    border: 1px solid #FFF;
+    font-size: 8pt;
+    text-align: left;
+    font-weight: bolder;
+}
+
+
+table.tablesorter thead tr .header {
+    background-image: url(../images/bg.gif);
+    background-repeat: no-repeat;
+    background-position: center right;
+    cursor: pointer;
+}
+table.tablesorter tbody td {
+    color: #3D3D3D;
+    background-color: #FFF;
+    vertical-align: middle;
+    border: 1px solid #FFF;
+    padding: 0px;
+}
+table.tablesorter tbody tr:hover td {
+    color: #3D3D3D;
+    background-color: #EDEDEC;
+    vertical-align: middle;
+    border: 1px solid #e6EEEE;
+    padding: 0px;
+}
+
+
+table.tablesorter tbody tr.odd td {
+    background-color:#F0F0F6;
+}
+table.tablesorter thead tr .headerSortUp {
+    background-image: url(../images/asc.gif);
+}
+table.tablesorter thead tr .headerSortDown {
+    background-image: url(../images/desc.gif);
+}
+table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
+    background-color: #8dbdd8;
+}
+
+table tbody tr.bg1 td{
+    background-color: #EDEDEC;
+}
+
+table thead tr.bg1 th{
+    background-color: #EDEDEC;
+}
+
+table thead tr.bg2 th{
+    background-color: #CDCDCD;
+}
+
+table thead tr.bg3 th{
+    background-color: #F5F5F5;
+}
+
+table tbody tr.bg2 td{
+    background-color: #e6EEEE;
+}
+
+table tbody tr.rojo td{
+    color: #b83400;
+}
+
+.tablapamplona{
+    margin-left: 5px;
+}
+
+
+.fondo_celda_1 {/*fondo primera celda - titulos de tabla generalmente*/
+    background-color: #5AB530;
+}
+
+table input[type="text"]{
+    width: 95%;
+    margin: auto;
+}
+
+.centrado{
+    text-align: center;    
+}
+
+.t-input{
+    padding: 0 10px;
+}

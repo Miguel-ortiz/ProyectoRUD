@@ -27,7 +27,17 @@ public class UsuarioVO {
     private String usua_usuario;
     private String usua_contrasena;
     private String usua_dependencia;
+    
+    private String num_completo;
 
+    public String getNum_completo() {
+        return num_completo;
+    }
+
+    public void setNum_completo(String num_completo) {
+        this.num_completo = num_completo;
+    }
+    
     public String getUsua_id() {
         return usua_id;
     }
