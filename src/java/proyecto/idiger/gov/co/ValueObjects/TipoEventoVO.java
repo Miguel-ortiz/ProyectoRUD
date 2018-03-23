@@ -21,8 +21,17 @@ public class TipoEventoVO {
     private String tpev_id;
     private String tpev_registradopor;
     private String tpev_descripcion;
+    private Timestamp tpev_fechaevento;
     private Timestamp tpev_fechacambio;
     private String tpev_estado;
+
+    public Timestamp getTpev_fechaevento() {
+        return tpev_fechaevento;
+    }
+
+    public void setTpev_fechaevento(Timestamp tpev_fechaevento) {
+        this.tpev_fechaevento = tpev_fechaevento;
+    }
 
     public String getTpev_id() {
         return tpev_id;

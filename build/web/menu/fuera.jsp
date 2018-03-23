@@ -85,7 +85,7 @@
     <div class="body-bg">
         <div class="shell" id="shell" >  
             <div class="logo"></div>
-            <div id="main" >
+            <!--<div id="main" >-->
     
     
     <div class="ui-widget">
@@ -100,7 +100,7 @@
     </div>
     
     
- </div>
+ <!--</div>-->
         <footer id="footer" role="contentinfo"> 
             <div class="container text-left" style="background-color:#073e65; line-height:0.6; padding:15px; padding-right:20px; width:96.5%; margin:0; ">
                 <div class="row text-left" style="margin:0; padding:0">

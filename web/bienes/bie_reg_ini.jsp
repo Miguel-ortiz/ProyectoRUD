@@ -12,24 +12,26 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <%--<%@ taglib uri="http://primefaces.prime.com.tr/" prefix="p" %>--%>
-<!--<link rel="stylesheet" type="text/css" href="../js/TableFilter/tablefilter.js" />-->
+
 <fmt:setBundle basename="proyecto.idiger.gov.co.utils.labels"/>
 <!DOCTYPE html>
-<div class="form-group">
-    <div class="input-group center-block">  
-        <input type="submit" onclick="location.href = '../menu/index.jsp'; return false;" value="Volver" alt="VOLVER" title="VOLVER" class="btn btn-primary"/>
-    </div>
-</div>
-<br/>
 <c:choose>
     <c:when test="${not empty miUsuarioVO}">
-        <form class="form" method="post" action="" autocomplete="off" id="FormAplication" name="FormAplication">
+        <c:import url='/includes/cabecera.jsp' />
+        <div class="boxes">
+            <div class="form-group">
+                <div class="input-group center-block">  
+                    <input type="submit" onclick="location.href = '../menu/index.jsp'; return false;" value="Volver" alt="VOLVER" title="VOLVER" class="btn btn-primary"/>
+                </div>
+            </div>
+            <br/>
+        <form class="form" method="post" action="bie_reg_ctr.jsp" autocomplete="off" id="FormAplication" name="FormAplication">
             <fieldset class="form-fieldset PaginarTabla">                
                 <legend class="text-center">Formulario Registro Bienes Inmuebles Afectados</legend>
                 <div class="form-group col-sm-3">
                     <div class="input-group">
                         <div class="input-group-addon"><fmt:message key='label.municipio' /></div>
-                        <select class="form-control" id="municipio_sel" name="municipio_sel" required >
+                        <select class="form-control" id="municipio_sel" name="municipio_sel" >
                             <option value="">--</option>
                         </select>
                     </div>
@@ -37,7 +39,7 @@
                 <div class="form-group col-sm-3">
                     <div class="input-group" >
                         <div class="input-group-addon"><fmt:message key='label.tipoEven' /></div>
-                        <select class="form-control" id="tipoeven_sel" name="tipoeven_sel" required >
+                        <select class="form-control" id="tipoeven_sel" name="tipoeven_sel"  >
                             <option value="">--</option>
                         </select>
                     </div>
@@ -47,6 +49,9 @@
                         <div class="input-group-addon"><fmt:message key='label.tipobien' /></div>
                         <select class="form-control" id="tipobien_sel" name="tipobien_sel" required >
                             <option value="">--</option>
+                            <c:forEach var="tipoBienVOs" items="${tipoBienVO}"  varStatus="i">
+                                <option value="${tipoBienVOs.argumento}">${tipoBienVOs.resultado}</option>
+                            </c:forEach>
                         </select>
                     </div>
                 </div>
@@ -55,6 +60,9 @@
                         <div class="input-group-addon"><fmt:message key='label.tenencia' /></div>
                         <select class="form-control" id="tenencia_sel" name="tenencia_sel" required >
                             <option value="">--</option>
+                            <c:forEach var="tenenciaVOs" items="${tenenciaVO}"  varStatus="i">
+                                <option value="${tenenciaVOs.argumento}">${tenenciaVOs.resultado}</option>
+                            </c:forEach>
                         </select>
                     </div>
                 </div>
@@ -103,6 +111,9 @@
                         <div class="input-group-addon"><fmt:message key='label.afectacion' /></div>
                         <select class="form-control" id="afectacion_sel" name="afectacion_sel" required >
                             <option value="">--</option>
+                            <c:forEach var="afectacionVOs" items="${afectacionVO}"  varStatus="i">
+                                <option value="${afectacionVOs.argumento}">${afectacionVOs.resultado}</option>
+                            </c:forEach>
                         </select>
                     </div>
                 </div>
@@ -189,12 +200,11 @@
                 </script>
             </fieldset>
         </form>
+   </div>
+        <c:import url='/includes/footer.jsp' />
     </c:when>
     <c:otherwise>
-        <c:import url="menu/fuera.jsp" />
+        <c:import url="/menu/fuera.jsp" />
     </c:otherwise>
 </c:choose>
-<script language="javascript" >
-    $('#bmenu').remove();
-</script>
 

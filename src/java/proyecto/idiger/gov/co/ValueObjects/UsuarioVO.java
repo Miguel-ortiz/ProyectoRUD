@@ -27,6 +27,7 @@ public class UsuarioVO {
     private String usua_usuario;
     private String usua_contrasena;
     private String usua_dependencia;
+    private String estilo;
     
     private String num_completo;
 
@@ -108,6 +109,14 @@ public class UsuarioVO {
 
     public void setUsua_dependencia(String usua_dependencia) {
         this.usua_dependencia = usua_dependencia;
+    }
+
+    public String getEstilo() {
+        return estilo;
+    }
+
+    public void setEstilo(String estilo) {
+        this.estilo = estilo;
     }
     
     

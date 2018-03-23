@@ -18,36 +18,45 @@ import proyecto.idiger.gov.co.logs.SesionLogs;
  * Archivo :
  */
 public class ConexionIdiger {
- /**Parametros de conexion*/
-   static String bd = "jdbc/Regafectados";
-   static String login = "REGAFECTADOS";
-   static String password = "regafectados2017";
-   static String url = "jdbc:oracle:thin:@//fopaescan.fopaedom.local:1521/siredb";
-   Connection connection = null;
- 
-   public ConexionIdiger() {
-      try{
-         //obtenemos el driver 
-         Class.forName("oracle.jdbc.OracleDriver");
-         //obtenemos la conexión
-         connection = DriverManager.getConnection(url,login,password);
-         if (connection!=null){
-            SesionLogs.Logs.RegistrarLogs("Conexión a base de datos "+bd+" OK\n");
-         }
-      }
-      catch(SQLException e){
-         System.out.println(e);
-      }catch(ClassNotFoundException e){
-         System.out.println(e);
-      }catch(Exception e){
-         System.out.println(e);
-      }
-   }
-   /**Permite retornar la conexión*/
-   public Connection getConnection(){
-      return connection;
-   }
-   public void desconectar(){
-      connection = null;
-   }
+
+    /**
+     * Parametros de conexion
+     */
+    static String bd = "jdbc/Regafectados";
+    static String login = "REGAFECTADOS";
+    static String password = "regafectados2017";
+    static String url = "jdbc:oracle:thin:@//fopaescan.fopaedom.local:1521/siredb";
+    Connection connection = null;
+
+    public ConexionIdiger() throws SQLException, Exception {
+        try {
+            //obtenemos el driver 
+            Class.forName("oracle.jdbc.OracleDriver");
+            //obtenemos la conexión
+            connection = DriverManager.getConnection(url, login, password);
+            if (connection != null) {
+                SesionLogs.Logs.RegistrarLogs(";;Conexión a base de datos " + bd + " OK ;Conectar");
+            }
+        } catch (SQLException e) {
+            SesionLogs.Errores.RegistrarLogs(";;ConexionIdiger;Conexión a base de datos;" + e.getMessage());
+            System.out.println(e);
+        } catch (ClassNotFoundException e) {
+            SesionLogs.Errores.RegistrarLogs(";;ConexionIdiger;Conexión a base de datos;" + e.getMessage());
+            System.out.println(e);
+        } catch (Exception e) {
+            SesionLogs.Errores.RegistrarLogs(";;ConexionIdiger;Conexión a base de datos;" + e.getMessage());
+            System.out.println(e);
+        }
+    }
+    /**
+     * Permite retornar la conexión
+     */
+    public Connection getConnection() {
+        return connection;
+    }
+
+    public void desconectar() throws SQLException, Exception {
+        connection = null;
+        SesionLogs.Logs.RegistrarLogs(";;ConexionIdiger;Desconexión a base de datos " + bd + " OK ;Desconexión");
+    }
 }

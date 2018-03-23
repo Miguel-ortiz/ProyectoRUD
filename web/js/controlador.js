@@ -1,7 +1,7 @@
+/* global openedWindow */
 //
 //CONTROLADOR JAVASCRIPT DE APLICACIONES PROPIAS
 //
-
 var maximo = 10;
 var tabs;
 var validator;
@@ -120,6 +120,25 @@ function enviarCTRLoad(id, url) {
 
 }
 
+function validarSeleccion(name, form, campovalue) {
+    try {
+        var lista = document.getElementsByName(name);
+        for (a = 0; a < lista.length; a++) {
+            if (lista[a].checked) {
+                document.getElementById(campovalue).value = lista[a].value;
+            }
+        }
+        if (document.getElementById(campovalue).value != "") {
+            document.getElementById(form).submit();
+        } else {
+//                alerta("", "<center>Ninguna seleccion encontrada<br><br><input type='button' value = 'Cerrar' onclick='$(\"#mensaje\").dialog( \"destroy\" ); $(\"#mensaje\").remove();'></center>", "dialog");
+            alert("Ninguna seleccion encontrada", "espera", "dialog");
+        }
+    } catch (ex) {
+        alerta("", "<center>Ninguna seleccion encontrada<br><br><input type='button' value = 'Cerrar' onclick='$(\"#mensaje\").dialog( \"destroy\" ); $(\"#mensaje\").remove();'></center>", "dialog");
+    }
+}
+
 function LoadSuper(id, url) {
 
     //alerta("Mensaje del Sistema", "espera", "dialog");
@@ -137,6 +156,7 @@ function LoadSuper(id, url) {
     }
 
 }
+
 function fechas() {
     $(".fecha").datepicker({
         buttonImage: false,
@@ -249,7 +269,7 @@ function procesar(accion, datos) {
         if (n.length > 0) {
             $("#mensaje").dialog("destroy");
             $("#mensaje").remove();
-            alerta("SU SESION A TERMINADO", "LO SENTIMOS SU SESION NO HA PODIDO VERIFICARSE <br/> <br/> <center><input type='button' value = 'Cerrar' onclick='location.href=\"fuera.jsp\"' class='ui-button ui-button-text-only ui-widget ui-state-default ui-corner-all'></center>", "dialog");
+            alerta("SU SESION A TERMINADO", "LO SENTIMOS SU SESION NO HA PODIDO VERIFICARSE <br/> <br/> <center><input type='button' value = 'Cerrar' onclick='location.href=\"../menu/fuera.jsp\"' class='ui-button ui-button-text-only ui-widget ui-state-default ui-corner-all'></center>", "dialog");
             return false;
         }
     } catch (ex) {
@@ -314,7 +334,7 @@ function procesarRequestAlertify(response) {
     var mensaje = "";
     var operacion = "";
     $(response).find("ejecucion").each(function () {
-        respuesta += $(this).find("respuesta").text();
+        respuesta += $(this).find("response").text();
         errores += $(this).find("errores").text();
         mensaje += $(this).find("mensaje").text();
         operacion += $(this).find("operacion").text();
@@ -343,11 +363,12 @@ function procesarRequestAlertify(response) {
     }
 }
 
-function redireccionar(url, s, msj, tipo) {
-    if (tipo === '1') {
-        alertify.success(msj);
-    } else if (tipo === '0') {
-        alertify.error(msj);
+function redireccionar(url,s) {
+    var pagina = $('#tipoevento_txt').val(); 
+    if (pagina != '') {
+        alertify.success("dato ok");
+    } else {
+        alertify.error("Ninguna seleccion encontrada");
     }
     setTimeout(function () {
         document.location.href = url;
@@ -362,7 +383,7 @@ function RegargarTag(id, url, tipo) {
             type: "POST",
             data: "",
             success: function (datos) {
-                //alert(url);
+                alert(url);
                 if (tipo == 'select') {
                     $("#" + id).html("");
                     $("#" + id).append(datos);
@@ -376,7 +397,7 @@ function RegargarTag(id, url, tipo) {
                 }
             },
             error: function () {
-                alert("Error en el procesamiento");
+                alert("Error en el procesamiento"+url);
             }
         });
     }
@@ -446,7 +467,7 @@ function validador() {
                     } else {
                         xml = datos;
                     }
-//                    alert(datos);
+                    alert(xml);
                     procesarRequestAlertify(xml);
                 },
                 error: function () {
@@ -557,7 +578,7 @@ function validadorFormDialog() {
             var funcion = $('#Form-Dialog #accion').val();
 //            alert(cadenaFormulario);
 //            alert(request);
-//            alerta("Mensaje del Sistema", "espera", "dialog");
+//            alert("Mensaje del Sistema", "espera", "dialog");
             $.ajax({
                 url: request,
                 type: "POST",
@@ -647,8 +668,8 @@ function ValidarCKEditor(FormId) {
 function ventanaCerrar() {
     if (confirm("Esta seguro de salir de la Aplicacion")) {
         var opciones = "width=260, height=105, screenX=0, screenY=0, top=0, left=0, scrollbars=no, status=no, resizable=no";
-        mi_close = window.open("fueraX.jsp", "FUERA", opciones);
-        parent.window.close();
+        mi_close = window.open("../menu/fueraC.jsp", "FUERA", opciones);
+        openedWindow.close();;
     }
 }
 
@@ -658,7 +679,6 @@ function ventanaNueva(url) {
     var opciones = "width=" + aw + ", height=" + ah + ", screenX=0, screenY=0, top=0, left=0, scrollbars=no, status=no, resizable=no";
     mi_ventana = window.open(url, "", opciones);
 }
-
 
 /*************************************************************/
 /****************  IDIOMA CALENDARIO *************************/

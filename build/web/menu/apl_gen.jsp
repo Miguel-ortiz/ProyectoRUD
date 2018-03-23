@@ -7,6 +7,8 @@
   Funcion del Archivo :
 --%>
 
+<%@page import="proyecto.idiger.gov.co.bdatos.TipoEventoDAO"%>
+<%@page import="proyecto.idiger.gov.co.ValueObjects.TipoEventoVO"%>
 <%@page import="proyecto.idiger.gov.co.ValueObjects.UsuarioVO"%>
 <%@page import="proyecto.idiger.gov.co.bdatos.UsuarioDAO"%>
 <%@page import="proyecto.idiger.gov.co.logs.SesionLogs"%>
@@ -14,40 +16,43 @@
 
 
 <%
-    String separador = System.getProperty("file.separator");
-    String ruta = application.getRealPath("") + separador + "Logs" + separador;
-    SesionLogs.Logs.setRuta(ruta + "Logs_");
-    SesionLogs.Errores.setRuta(ruta + "Errores_");
-
-    String idUsuario = "1";
-
-    if (idUsuario != null) {
-        UsuarioDAO UsuarioDAO = new UsuarioDAO();
-        UsuarioVO usuarioVO = (UsuarioVO) UsuarioDAO.consultar(idUsuario);
-        System.out.println("Aqui llego 1");
-        if (usuarioVO != null) {
-            System.out.println("Aqui llego 2");
-            session.setAttribute("miUsuarioVO", usuarioVO);
-            /**
-             * *********************LOGS***********************
-             */
-            String ip = request.getHeader("X-Forwarded-For");
-            if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
-                ip = request.getHeader("Proxy-Client-IP");
-            }
-            if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
-                ip = request.getHeader("WL-Proxy-Client-IP");
-            }
-            if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
-                ip = request.getHeader("HTTP_CLIENT_IP");
-            }
-            if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
-                ip = request.getHeader("HTTP_X_FORWARDED_FOR");
-            }
-            if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
-                ip = request.getRemoteAddr();
-            }
-            SesionLogs.Logs.RegistrarLogs(usuarioVO.getUsua_id() + ";;INGRESA DESDE IP ;" + ip);
+//    String separador = System.getProperty("file.separator");
+//    String ruta = application.getRealPath("") + separador + "Logs" + separador;
+//    SesionLogs.Logs.setRuta(ruta + "Logs_");
+//    SesionLogs.Errores.setRuta(ruta + "Errores_");
+//
+//    String idUsuario = "1";
+//    String idTipoEven = String.valueOf(session.getAttribute("tpev_id"));
+//
+//    if (idUsuario != null) {
+//        UsuarioDAO UsuarioDAO = new UsuarioDAO();
+//        UsuarioVO usuarioVO = (UsuarioVO) UsuarioDAO.consultar(idUsuario);
+//        TipoEventoVO tipoEventoVO = new TipoEventoDAO(usuarioVO.getUsua_id()).bitacora(idTipoEven);
+//        System.out.println("Aqui llego 1");
+//        if (usuarioVO != null) {
+//            System.out.println("Aqui llego 2");
+//            session.setAttribute("miUsuarioVO", usuarioVO);
+//            session.setAttribute("tipoEventoVO", tipoEventoVO);
+//            /**
+//             * *********************LOGS***********************
+//             */
+//            String ip = request.getHeader("X-Forwarded-For");
+//            if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
+//                ip = request.getHeader("Proxy-Client-IP");
+//            }
+//            if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
+//                ip = request.getHeader("WL-Proxy-Client-IP");
+//            }
+//            if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
+//                ip = request.getHeader("HTTP_CLIENT_IP");
+//            }
+//            if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
+//                ip = request.getHeader("HTTP_X_FORWARDED_FOR");
+//            }
+//            if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
+//                ip = request.getRemoteAddr();
+//            }
+//            SesionLogs.Logs.RegistrarLogs(usuarioVO.getUsua_id() + ";;INGRESA DESDE IP ;" + ip);
             /**
              * ************************************************
              */
@@ -59,7 +64,7 @@
     </head>
     <body>
         <form name="form1" id="form1" method="post">
-            <input type="hidden" name="pagina" id="pagina" value="../menu/index.jsp" />
+            <input type="hidden" name="pagina" id="pagina" value="/ProyectoRUD/menu/eve_eve_ctr.jsp" />
         </form>
     </body>
     <script language="JavaScript" type="text/JavaScript">
@@ -73,16 +78,17 @@
         var isGecko	= ( /gecko/i.test ( navigator.userAgent ) ) ;
 
         if ( !isGecko && !isIE ) {
-        enviar(document.forms['form1'] , 'menu/navegador.jsp');
+        enviar(document.forms['form1'] , '/ProyectoRUD/menu/navegador.jsp');
         }else{
-        enviar(document.forms['form1'] , 'menu/inicioSeguro.jsp');
+        enviar(document.forms['form1'] , '/ProyectoRUD/menu/inicioSeguro.jsp');
         }
     </script>
 </html>
-<%        } else {
-            response.sendRedirect("menu/fuera.jsp");
-        }
-    } else {
-        response.sendRedirect("menu/fuera.jsp");
-    }
+<%       
+//    } else {
+//            response.sendRedirect("../menu/fuera.jsp");
+//        }
+//    } else {
+//        response.sendRedirect("../menu/fuera.jsp");
+//    }
 %>

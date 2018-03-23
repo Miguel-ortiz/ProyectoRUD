@@ -13,26 +13,45 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <title>IDIGER - Registro Unico de Desartres</title>
-
         <meta http-equiv="Content-Type" content="text/html" charset="iso-8859-1" />
+        <link href="../css/forms.css" rel="stylesheet" type="text/css"/>
+        <link href="../includes/css/style.css" rel="stylesheet" type="text/css"/>
+        <link href="../css/bootstrap/easyui.css" rel="stylesheet" type="text/css"/>
+        <link href="../css/alertify/alertify.core.css" rel="stylesheet" type="text/css"/>
+        <link href="../css/alertify/alertify.default.css" rel="stylesheet" type="text/css"/>
         <link href="../css/bootstrap.css" rel="stylesheet" type="text/css"/>
-        <link rel="stylesheet" type="text/css" href="../css/forms.css" />
-        <link rel="stylesheet" type="text/css" href="../css/tablas.css" />
-        <link rel="stylesheet" type="text/css" href="../includes/css/style.css" />
-        <link rel="stylesheet" type="text/css" href="../css/ui.css" />
-        <link rel="stylesheet" type="text/css" href="../css/alertify/alertify.core.css" />
-        <link rel="stylesheet" type="text/css" href="../css/alertify/alertify.default.css" />
+        <link href="../css/jquery-ui.css" rel="stylesheet" type="text/css"/>
+        <link href="../css/jquery.fileupload-ui.css" rel="stylesheet" type="text/css"/>
+        <link href="../css/modalLoader.css" rel="stylesheet" type="text/css"/>
+        <link href="../css/style_light.css" rel="stylesheet" type="text/css"/>
+        <link href="../css/tablas.css" rel="stylesheet" type="text/css"/>
+        <link href="../css/tablasextra.css" rel="stylesheet" type="text/css"/>
+        <link href="../css/timepicki.css" rel="stylesheet" type="text/css"/>
+        <link href="../css/ui.css" rel="stylesheet" type="text/css"/>
         
-        <script type="text/javascript" src="../js/jquery.js"></script>
-        <script type="text/javascript" src="../js/jquery-ui.min.js"></script>
-        <script type="text/javascript" src="../js/timepicki.js"></script>
-        <script type="text/javascript" src="../js/controlador.js?<%=Math.random()%>"></script>
-        <script type="text/javascript" src="../js/jquery.validate.js"></script>
-        <script type="text/javascript" src="../js/alertify.js"></script>
-        <script src="../js/jquery.fileupload-uix.js" type="text/javascript"></script>
+        <script src="../js/Filter/tablefilter.js" type="text/javascript"></script>
+        <script src="../js/external/jquery/jquery.js?<%=Math.random()%>" type="text/javascript"></script>
+        <script src="../js/additional-methods.js" type="text/javascript"></script>
+        <script src="../js/alertify.js" type="text/javascript"></script>
+        <script src="../js/bootstrap.js" type="text/javascript"></script>
+        <script src="../js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="../js/controlador.js?<%=Math.random()%>" type="text/javascript"></script>
+        <script src="../js/dialog-patch.js" type="text/javascript"></script>
+        <script src="../js/iframes-controllers.js" type="text/javascript"></script>
+        <script src="../js/jquery-ui.min.js" type="text/javascript"></script>
+        <script src="../js/jquery.autocomplete.js" type="text/javascript"></script>
+        <!--<script src="../js/jquery.blockUI.js" type="text/javascript"></script>-->
+        <script src="../js/jquery.easyui.min.js" type="text/javascript"></script>
         <script src="../js/jquery.fileupload-ui.js" type="text/javascript"></script>
+        <script src="../js/jquery.fileupload-uix.js" type="text/javascript"></script>
         <script src="../js/jquery.fileupload.js" type="text/javascript"></script>
-        <script type="text/javascript" src="../js/Filter/tablefilter.js"></script>
+        <script src="../js/jquery.js?<%=Math.random()%>" type="text/javascript"></script>
+        <script src="../js/jquery.tablesorter.js" type="text/javascript"></script>
+        <script src="../js/jquery.tablesorter.pager.js" type="text/javascript"></script>
+        <script src="../js/jquery.tabs.js" type="text/javascript"></script>
+        <script src="../js/jquery.uniform.js" type="text/javascript"></script>
+        <script src="../js/jquery.validate.js" type="text/javascript"></script>
+        <script src="../js/timepicki.js" type="text/javascript"></script>
         <script src="../ckeditor/ckeditor.js" type="text/javascript"></script>
     </head>
     <!-- START PAGE SOURCE -->
@@ -51,6 +70,7 @@
                 <div class="logo"></div>
                 <br/>
                 <div id="main" >
+                    <br/>
                     <div class="usuario">
                         <%
                             UsuarioVO MiUsuarioVO = (UsuarioVO) session.getAttribute("miUsuarioVO");

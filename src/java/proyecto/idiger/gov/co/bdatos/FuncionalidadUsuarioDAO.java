@@ -1,11 +1,5 @@
 package proyecto.idiger.gov.co.bdatos;
 
-import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.Iterator;
-import javax.servlet.jsp.JspWriter;
-import proyecto.idiger.gov.co.Metodos.ProcesaCadenas;
-import proyecto.idiger.gov.co.ValueObjects.FuncionalidadUsuarioVO;
 
 /*
  * To change this license header, choose License Headers in Project Properties.

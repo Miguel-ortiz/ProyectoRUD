@@ -7,11 +7,27 @@
   Funcion del Archivo :
 --%>
 
+<%@page import="proyecto.idiger.gov.co.ValueObjects.UsuarioVO"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ page language="java" import="java.util.*, java.lang.*" %>
 <!DOCTYPE html>
-
-
+<%
+    if (session.isNew() || session.getAttribute("miUsuarioVO") == null) {
+        session.invalidate();
+%>
+<script language="javascript">
+    window.close();
+</script>
+<%
+} else {
+    String estiloApl = "001";
+    UsuarioVO miUsuarioVO = (UsuarioVO) session.getAttribute("miUsuarioVO");
+    if (miUsuarioVO != null) {
+        estiloApl = (String) miUsuarioVO.getEstilo();
+    }
+    session.removeAttribute("miUsuarioVO");
+    session.invalidate();
+%>
 <title>IDIGER - Registro Unico de Desartres</title>
 <script language="JavaScript">
     //  ------------------------------------------------------------------------------------
@@ -70,7 +86,7 @@
 
     document.onkeydown = whichKey;
 </script> 
-<body onLoad="javascript: restaurar();">
+<body>
     <form name="form1" action="" method="post" >
         <div style="height: 105px; width: 260px;">
             <center>
@@ -89,7 +105,10 @@
     setTimeout("descargar()", 1000);
 	
     function descargar () {
+        openedWindow.close();
         window.close();
     }
 </script>
-<!--%}%-->
+<%
+    }
+%>

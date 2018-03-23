@@ -58,9 +58,9 @@ public class UsuarioDAO {
                 if (Conexion != null) {
                     Conexion.desconectar();
                 }
-            } catch (Exception ex) {
+            } catch (SQLException e) {
                 SesionLogs.Errores.RegistrarLogs("::::::::: Error Cierre de Conexion :::::::::");
-                SesionLogs.Errores.RegistrarLogs(ex.getMessage());
+                SesionLogs.Errores.RegistrarLogs(e.getMessage());
                 SesionLogs.Errores.RegistrarLogs("::::::::: Fin de error :::::::::");
             }
         }

@@ -7,35 +7,41 @@
   Funcion del Archivo :
 --%>
 
-<%@page import="java.sql.Timestamp"%>
-<%@page import="java.text.SimpleDateFormat"%>
-<%@page import="java.util.Date"%>
 <%@ page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <%--<%@ taglib uri="http://primefaces.prime.com.tr/" prefix="p" %>--%>
-<!--<link rel="stylesheet" type="text/css" href="../js/TableFilter/tablefilter.js" />-->
+
 <fmt:setBundle basename="proyecto.idiger.gov.co.utils.labels"/>
 <!DOCTYPE html>
-<div class="form-group">
-    <div class="input-group center-block">  
-        <input type="submit" onclick="location.href = '../menu/index.jsp'; return false;" value="Volver" alt="VOLVER" title="VOLVER" class="btn btn-primary"/>
-    </div>
-</div>
-<br/>
 <c:choose>
     <c:when test="${not empty miUsuarioVO}">
-        <form class="form" method="post" action="" autocomplete="off" id="FormAplication" name="FormAplication">
+        <c:import url='/includes/cabecera.jsp' />
+        <div class="boxes">
+            <div class="form-group">
+                <div class="input-group center-block">  
+                    <input type="submit" onclick="location.href = '../menu/index.jsp'; return false;" value="Volver" alt="VOLVER" title="VOLVER" class="btn btn-primary"/>
+                </div>
+            </div>
+            <br/>
+        <form class="form" method="post" action="cul_reg_ctr.jsp" autocomplete="off" id="FormAplication" name="FormAplication">
             <fieldset class="form-fieldset">                
                 <legend class="text-center">Formulario Registro Cultivos Perdidos</legend>
                 <div class="col-sm-4 ">
                     <div class="input-group">
+                        <div class="input-group-addon">
+                            <fmt:message key='label.nomcultivo' /> 
+                        </div>
+                        <input id="nomcultivo_txt" name="nomcultivo_txt" class="form-control"  type="text">
+                    </div> 
+                        
+<!--                    <div class="input-group">
                         <div class="input-group-addon"><fmt:message key='label.nomcultivo' /></div>
                         <select class="form-control" id="nomcultivo_sel" name="nomcultivo_sel" required >
                             <option value="">--</option>
                         </select>
-                    </div>
+                    </div>-->
                 </div>
                 <div class=" col-sm-3" style="width: 120px;">
                     <div class="input-group" >
@@ -47,16 +53,19 @@
                     <div class="input-group">
                         <div class="input-group-addon"><fmt:message key='label.unidad' /></div>
                         <select class="form-control" id="unidad_sel" name="unidad_sel" required style="width: 170px;">
-                            <option value="">Fanegada o Cuadra</option>
+                            <option value="">--</option>
+                            <c:forEach var="UnidadVOs" items="${UnidadVO}"  varStatus="i">
+                                <option value="${UnidadVOs.argumento}">${UnidadVOs.resultado}</option>
+                            </c:forEach>
                         </select>
                     </div>
                 </div>
                 <div class="form-group col-sm-1">
                     <div class="input-group">
                         <div class="input-group-addon"><fmt:message key='label.credito' /></div>
-                        <select class="form-control" id="credito_sel" name="credito_sel" required style="width: 50px;">
-                            <option value="">No</option>
-                            <option value="">Si</option>
+                        <select class="form-control" id="credito_sel" name="credito_sel" style="width: 50px;">
+                            <option value="0">No</option>
+                            <option value="1">Si</option>
                         </select>
                     </div>
                 </div>
@@ -159,12 +168,10 @@
                     tf = setFilterGrid("tab2", table);
                 </script>
             </fieldset>
-        </form>
+           </div>
+        <c:import url='/includes/footer.jsp' />
     </c:when>
     <c:otherwise>
-        <c:import url="menu/fuera.jsp" />
+        <c:import url="/menu/fuera.jsp" />
     </c:otherwise>
 </c:choose>
-<script language="javascript" >
-    $('#bmenu').remove();
-</script>

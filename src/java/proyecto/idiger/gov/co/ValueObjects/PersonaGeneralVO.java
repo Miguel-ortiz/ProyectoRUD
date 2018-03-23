@@ -34,6 +34,13 @@ public class PersonaGeneralVO {
     private String tpdo_id;
     private String pege_documento;
     private String pege_telefono;
+    
+    private String etni_id;
+    private String etni_descripcion;
+    private String regm_id;
+    private String regm_descripcion;
+    private String pege_afrocolombia;
+    private String parn_id;
 
     public String getPege_id() {
         return pege_id;
@@ -161,6 +168,54 @@ public class PersonaGeneralVO {
 
     public void setPege_telefono(String pege_telefono) {
         this.pege_telefono = pege_telefono;
+    }
+
+    public String getEtni_id() {
+        return etni_id;
+    }
+
+    public void setEtni_id(String etni_id) {
+        this.etni_id = etni_id;
+    }
+
+    public String getEtni_descripcion() {
+        return etni_descripcion;
+    }
+
+    public void setEtni_descripcion(String etni_descripcion) {
+        this.etni_descripcion = etni_descripcion;
+    }
+
+    public String getRegm_id() {
+        return regm_id;
+    }
+
+    public void setRegm_id(String regm_id) {
+        this.regm_id = regm_id;
+    }
+
+    public String getRegm_descripcion() {
+        return regm_descripcion;
+    }
+
+    public void setRegm_descripcion(String regm_descripcion) {
+        this.regm_descripcion = regm_descripcion;
+    }
+
+    public String getPege_afrocolombia() {
+        return pege_afrocolombia;
+    }
+
+    public void setPege_afrocolombia(String pege_afrocolombia) {
+        this.pege_afrocolombia = pege_afrocolombia;
+    }
+
+    public String getParn_id() {
+        return parn_id;
+    }
+
+    public void setParn_id(String parn_id) {
+        this.parn_id = parn_id;
     }
     
     

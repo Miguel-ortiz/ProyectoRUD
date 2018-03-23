@@ -12,21 +12,6 @@
     <head>
         <title>IDIGER - Registro Unico de Desartres </title>
         <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-        <script language="JavaScript" type="text/JavaScript">
-            <!--
-            function MM_openBrWindow(theURL,winName,features) { //v2.0
-            window.open(theURL,winName,features);
-            }
-            function restaurar(){
-            var aw = screen.availWidth;
-            var ah = screen.availHeight;
-            window.moveTo(0, 0);
-            window.resizeTo(aw, ah);
-            setTimeout("self.focus()", 1);
-            }
-            restaurar ();
-            //-->
-        </script>
     </head>
     <frameset rows="0,*" framespacing="0" frameborder="NO" border="0" onUnload="MM_openBrWindow('/menu/fueraC.jsp', 'Fuera', 'width=260, height=105, screenX=0, screenY=0, top=0, left=0, scrollbars=no, status=no, resizable=no')" >
         <frame name="topFrame" scrolling="NO" noresize />

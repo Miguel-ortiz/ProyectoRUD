@@ -25,6 +25,7 @@ public class PoblAfectadaPerGenVO {
     private String epev_id;
     private String tpfa_id;
     private String coat_id; 
+    private String papg_familia;
 
     public String getPege_id() {
         return pege_id;
@@ -80,6 +81,14 @@ public class PoblAfectadaPerGenVO {
 
     public void setCoat_id(String coat_id) {
         this.coat_id = coat_id;
+    }
+
+    public String getPapg_familia() {
+        return papg_familia;
+    }
+
+    public void setPapg_familia(String papg_familia) {
+        this.papg_familia = papg_familia;
     }
     
     

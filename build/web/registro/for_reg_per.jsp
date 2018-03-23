@@ -18,8 +18,8 @@
             <div>
                 <!--<legend>NUEVO FORMULARIO</legend>-->
                 <!--<br/>-->
-                <!-- <div id="bmenu" style="width: 100%; "></div>
-                     <br/>-->
+                 <div id="bmenu" style="width: 100%; "></div>
+                     <br/>
                 <form class="form" method="post" enctype="multipart/form-data" autocomplete="off" id="FormAplication" name="FormAplication">
                     <div id="contenidoInterno" style="width: 100%">
                         <c:import url="/registro/for_reg_ini.jsp"/>
@@ -32,7 +32,7 @@
         <c:import url='/includes/footer.jsp' />
     </c:when>
     <c:otherwise>
-        <c:import url='menu/fuera.jsp' />
+        <c:import url='/menu/fuera.jsp' />
     </c:otherwise>
 </c:choose>
 <script language="javascript" >

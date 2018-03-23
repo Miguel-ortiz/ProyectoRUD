@@ -32,7 +32,7 @@
         <c:import url='/includes/footer.jsp' />
     </c:when>
     <c:otherwise>
-        <c:import url='menu/fuera.jsp' />
+        <c:import url='/menu/fuera.jsp' />
     </c:otherwise>
 </c:choose>
 <script language="javascript" >
