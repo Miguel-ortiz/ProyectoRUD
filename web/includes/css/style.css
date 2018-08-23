@@ -45,7 +45,7 @@ a img {
 }
 .body-bg {
     height: 98%;
-    background:url(images/body-bg2.gif) repeat-x 0 0;
+    /*background:url(images/body-bg2.gif) repeat-x 0 0;*/
     padding-top: 10px;
 }
 .shell { 
@@ -169,10 +169,12 @@ a img {
     height:50px;
 }
 .logo{
-    background: url(../css/images/header3.png) no-repeat;
+    background: url(../css/images/header.png) no-repeat;
     height: 10%; 
     background-position: center;
     background-size: contain;
+    margin: 5px 0 20px;
+    border-bottom: 1px solid #003c66;
 }
 .logoUdec{
     /*z-index: 2;*/
@@ -213,12 +215,13 @@ a img {
     text-decoration:none;
 }
 #main {
-    border:1px solid #b9b7b7;
+    border:1px solid #fff;
     background:#fff;
     border-radius: 5px;
     width:100%;
     padding: 0px 0px 15px 0px;
-    //height:80%;
+    height: auto;
+    min-height: 80%;
 }
 #main .btn-more {
     background:url(images/btn-more.gif) no-repeat 0 0;
@@ -365,11 +368,11 @@ a img {
 
 #footer{
     margin-top: 10px;
-    text-align: left;
+    text-align: center;
     padding: 10px 0;
-    font-size:10px;
+    font-size:20px;
     line-height:10px;
-    text-transform:uppercase;
+    /*text-transform:uppercase;*/
 }
 
 .span4{width:300px;}

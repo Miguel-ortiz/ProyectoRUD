@@ -45,6 +45,7 @@
         switch (opcion) {
             case 0:
                 listarunidad();
+                consultar();
                 path = "/cultivos/cul_reg_ini.jsp";
                 procesa = false;
                 break;
@@ -95,4 +96,15 @@
                 _session.setAttribute("dato", "si");
             }
         }
+    void consultar() throws UnsupportedEncodingException, Exception {
+
+        RegistroRUDDAO dDAO = new RegistroRUDDAO(MiUsuarioVO.getUsua_id());
+        List<CultivosAfectadosRUDVO> cultivosAfectadosRUDVOs = new CultivosAfectadosRUDAO(MiUsuarioVO.getUsua_id()).ListarCultivo(dDAO .NumRegistro().getRegi_id());
+        _session.removeAttribute("cultivosAfectadosRUDVO");
+        _session.removeAttribute("datos");
+        if (cultivosAfectadosRUDVOs != null) {
+            _session.setAttribute("cultivosAfectadosRUDVO", cultivosAfectadosRUDVOs);
+            _session.setAttribute("datos", "si");
+        }
+    }
     %>

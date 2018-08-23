@@ -47,6 +47,7 @@
                 listarAfectacion();
                 listarTenencia();
                 listarTipoBien();
+                consultar();
                 path = "/bienes/bie_reg_ini.jsp";
                 procesa = false;
                 break;
@@ -120,4 +121,15 @@
                 _session.setAttribute("dato", "si");
             }
         }
+    void consultar() throws UnsupportedEncodingException, Exception {
+
+        RegistroRUDDAO dDAO = new RegistroRUDDAO(MiUsuarioVO.getUsua_id());
+        List<BienesAfectadosRUDVO> bienesAfectadosRUDVOs = new BienesAfectadosRUDAO(MiUsuarioVO.getUsua_id()).Listarbienesafec(dDAO .NumRegistro().getRegi_id());
+        _session.removeAttribute("bienesAfectadosRUDVO");
+        _session.removeAttribute("datos");
+        if (bienesAfectadosRUDVOs != null) {
+            _session.setAttribute("bienesAfectadosRUDVO", bienesAfectadosRUDVOs);
+            _session.setAttribute("datos", "si");
+        }
+    }
 %>

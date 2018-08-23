@@ -29,7 +29,7 @@
             <form class="form" method="post" action="pec_reg_ctr.jsp" autocomplete="off" id="FormAplication" name="FormAplication">
                 <fieldset class="form-fieldset PaginarTabla">                
                     <legend class="text-center">Formulario Registro Pecuario</legend>
-                    <div class="form-group col-sm-3">
+                    <div class="form-group col-xs-3 col-md-3">
                         <div class="input-group">
                             <div class="input-group-addon"><fmt:message key='label.pecuario' /></div>
                             <select class="form-control" id="pecuario_sel" name="pecuario_sel" required >
@@ -40,7 +40,7 @@
                             </select>
                         </div>
                     </div>
-                    <div class="form-group col-sm-3">
+                    <div class="form-group col-xs-3 col-md-3">
                         <div class="input-group">
                             <div class="input-group-addon">
                                 <fmt:message key='label.cantidad' /> 
@@ -48,7 +48,7 @@
                             <input id="cantidad_txt" name="cantidad_txt" class="form-control"  type="text">
                         </div>
                     </div>
-                    <div class="form-group col-sm-4">
+                    <div class="form-group col-xs-3 col-md-3">
                         <div class="input-group">
                             <div class="input-group-addon">
                                 <fmt:message key='label.especipez' /> 
@@ -56,7 +56,7 @@
                             <input id="especipez_txt" name="especipez_txt" class="form-control"  type="text">
                         </div>
                     </div>
-                    <div class="form-group col-sm-10">
+                    <div class="form-group col-xs-10">
                         <div class="input-group">
                             <div class="input-group-addon"><fmt:message key='label.observas' /></div>
                             <textarea  class="form-control" name="obserpecua_txt" id="obserpecua_txt" rows="2" cols="100">
@@ -73,16 +73,16 @@
                         </div>
                     </div>
                 </center>
-                <c:if test="${dato eq 'si'}">
+                <c:if test="${datos eq 'si'}">
                     <fieldset class="form-fieldset">
                         <table style="margin: auto; text-align: center; " class="table table-bordered table-hover" cellspacing="1" cellpadding="0" border="1" id="tab2">
                             <thead>
                                 <tr>
                                     <th>#</th>
-                                    <th><fmt:message key='label.municipio' /></th>
-                                    <th><fmt:message key='label.tipoEven' /></th>
-                                    <th><fmt:message key='label.tipobien' /></th>
-                                    <th><fmt:message key='label.tenencia' /></th>
+                                    <th><fmt:message key='label.pecuario' /></th>
+                                    <th><fmt:message key='label.cantidad' /></th>
+                                    <th><fmt:message key='label.especipez' /></th>
+                                    <th><fmt:message key='label.observas' /></th>
                                     <th>Acciones</th>
                                 </tr>
                             </thead>
@@ -90,13 +90,14 @@
                                 <c:set var="color" value="black" />
                                 <c:choose>
                                     <c:when test="${not empty datos}"> 
-                                        <c:forEach var="personaVO" items="${PersonaVOs}"  varStatus="i">
+                                        <c:forEach var="pecuariosRUDVOs" items="${pecuariosRUDVOs}"  varStatus="i">
                                             <tr>
-                                                <td style="text-align: center;"></td> 
-                                                <td style="color: ${color}">${personaVO.paac_descripcion}</td>
-                                                <td style="color: ${color}">${personaVO.conv_nombre}</td>
-                                                <td style="color: ${color}">${personaVO.conv_estado}</td>
-                                                <td style="color: ${color}">${personaVO.pege_nombrecomercial}</td>
+<!--                                                <td style="text-align: center;"></td> -->
+                                                <td style="color: ${color}">${pecuariosRUDVOs.pecu_id}</td>
+                                                <td style="color: ${color}">${pecuariosRUDVOs.tppc_descripcion}</td>
+                                                <td style="color: ${color}">${pecuariosRUDVOs.pecu_cantidad}</td>
+                                                <td style="color: ${color}">${pecuariosRUDVOs.pecu_especiepez}</td>
+                                                <td style="color: ${color}">${pecuariosRUDVOs.pecu_observaciones}</td>
                                                 <td style="text-align: center;">Acciones</td> 
                                             </tr>
                                         </c:forEach>

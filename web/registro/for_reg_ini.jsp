@@ -28,13 +28,13 @@
             <form class="form" method="post" action="for_reg_ctr.jsp" autocomplete="off" id="FormAplication" name="FormAplication">
                 <fieldset class="form-fieldset">                
                     <legend class="text-center">Formulario Registro</legend>
-                    <fieldset class="" style="border:1px #000 solid ; border-radius:5px">
+                    <fieldset>
                         <div class="row">
                             <br/>
                     <div class="form-group col-xs-3 col-md-3">
                         <div class="input-group">
                             <div class="input-group-addon"><fmt:message key='label.departamento' /></div>
-                            <select class="form-control" id="departamento_sel" name="departamento_sel"  >
+                            <select class="form-control" id="departamento_sel" name="departamento_sel" readonly >
                                 <option value="">--</option>
                             </select>
                         </div>
@@ -42,7 +42,7 @@
                     <div class="form-group col-xs-3 col-md-3">
                         <div class="input-group">
                             <div class="input-group-addon"><fmt:message key='label.municipio' /></div>
-                            <select class="form-control" id="municipio_sel" name="municipio_sel"  >
+                            <select class="form-control" id="municipio_sel" name="municipio_sel" readonly >
                                 <option value="">--</option>
                             </select>
                         </div>
@@ -51,24 +51,25 @@
                     <div class="form-group col-xs-3 col-md-3"> 
                         <div class="input-group">
                             <div class="input-group-addon"><fmt:message key='label.fechaEven' /></div>
-                            <span class="form-control text-center " ><fmt:formatDate value="${tipoEventoVO.tpev_fechaevento}" pattern='dd-MM-yyyy' /></span>
+                            <span class="form-control text-center " ><fmt:formatDate value="${tipoEventoVO.tpev_fechaevento}" pattern='dd-MM-yyyy'/></span>
                         </div>
                     </div>
                     <div class="form-group col-xs-10 col-md-10">
                         <div class="input-group" >
                             <div class="input-group-addon"><fmt:message key='label.tipoEven' /></div>
-                            <select class="form-control" id="tipoeven_sel" name="tipoeven_sel" readonly style="width: 140px" >
+                            <select class="form-control" id="tipoeven_sel" name="tipoeven_sel" readonly style="width: 185px" >
                                 <option value="${tipoEventoVO.tpev_id}">${tipoEventoVO.tpev_descripcion}</option>
                             </select>
                         </div>
                     </div>
                         </div>
+                            <div style="border-bottom: 1.5px solid #c0c0c0;"></div>
                     </fieldset>
                             <br/>
                     <div class="form-group col-xs-3 col-md-3">
                         <div class="input-group">
                             <div class="input-group-addon">
-                                <fmt:message key='label.ubicacion' /><span style="color: red">(*)</span>
+                                <fmt:message key='label.ubicacion' /><span>*</span>
                             </div>
                             <select class="form-control" id="ubicacion_sel" name="ubicacion_sel" required >
                                 <option value="">seleccione..</option>
@@ -104,12 +105,12 @@
                             <div class="input-group-addon">
                                 <fmt:message key='label.numFamilia' /> 
                             </div>
-                            <input id="numfamil_txt" name="numfamil_txt" class="form-control" type="number" min="1" value="1" style="width: 40px">
+                            <input id="numfamil_txt" name="numfamil_txt" class="form-control" type="number" min="1" value="1" style="width: 180px">
                         </div>
                     </div>
                     <div class="form-group col-xs-3 col-md-3">
                         <div class="input-group">
-                            <div class="input-group-addon" style="font-size: 12px;"><fmt:message key='label.fechaElabo'/><span style="color: red">(*)</span></div>
+                            <div class="input-group-addon" style="font-size: 16px;"><fmt:message key='label.fechaElabo'/><span>*</span></div>
                             <input id="fechaelabo_txt" name="fechaelabo_txt" class="form-control" type="date" required style="width: 95%">
                         </div>
                     </div>
@@ -209,7 +210,7 @@
                     <div class="form-group col-xs-3 col-md-3">
                         <div class="input-group" >
                             <div class="input-group-addon">
-                                <fmt:message key='label.responsable' /><span style="color: red">(*)</span>  
+                                <fmt:message key='label.responsable' /><span>*</span>  
                             </div>
                             <input id="responsable_txt" name="responsable_txt" class="form-control"  type="text" readonly value="${miUsuarioVO.num_completo}">
                         </div>
@@ -217,7 +218,7 @@
                     <div class="form-group col-xs-3 col-md-3">
                         <div class="input-group" >
                             <div class="input-group-addon">
-                                <fmt:message key='label.entidad' /><span style="color: red">(*)</span> 
+                                <fmt:message key='label.entidad' /><span>*</span> 
                             </div>
                             <input id="entidad_txt" name="entidad_txt" class="form-control"  type="text" readonly value="${miUsuarioVO.usua_entidad}">
                         </div>

@@ -27,21 +27,21 @@
         <link href="../css/bootstrap.css" rel="stylesheet" type="text/css"/>
         <link href="../css/jquery-ui.css" rel="stylesheet" type="text/css"/>
         <link href="../css/jquery.fileupload-ui.css" rel="stylesheet" type="text/css"/>
-        <link href="../css/modalLoader.css" rel="stylesheet" type="text/css"/>
+        <!--<link href="../css/modalLoader.css" rel="stylesheet" type="text/css"/>-->
         <link href="../css/style_light.css" rel="stylesheet" type="text/css"/>
-        <link href="../css/tablas.css" rel="stylesheet" type="text/css"/>
-        <link href="../css/tablasextra.css" rel="stylesheet" type="text/css"/>
+<!--        <link href="../css/tablas.css" rel="stylesheet" type="text/css"/>
+        <link href="../css/tablasextra.css" rel="stylesheet" type="text/css"/>-->
         <link href="../css/timepicki.css" rel="stylesheet" type="text/css"/>
-        <link href="../css/ui.css" rel="stylesheet" type="text/css"/>
+        <!--<link href="../css/ui.css" rel="stylesheet" type="text/css"/>-->
         
-        <script src="../js/Filter/tablefilter.js" type="text/javascript"></script>
+        <!--<script src="../js/Filter/tablefilter.js" type="text/javascript"></script>-->
         <script src="../js/external/jquery/jquery.js?<%=Math.random()%>" type="text/javascript"></script>
-        <script src="../js/additional-methods.js" type="text/javascript"></script>
+        <!--<script src="../js/additional-methods.js" type="text/javascript"></script>-->
         <script src="../js/alertify.js" type="text/javascript"></script>
-        <script src="../js/bootstrap.js" type="text/javascript"></script>
-        <script src="../js/bootstrap.min.js" type="text/javascript"></script>
+        <!--<script src="../js/bootstrap.js" type="text/javascript"></script>-->
+        <!--<script src="../js/bootstrap.min.js" type="text/javascript"></script>-->
         <script src="../js/controlador.js?<%=Math.random()%>" type="text/javascript"></script>
-        <script src="../js/dialog-patch.js" type="text/javascript"></script>
+        <!--<script src="../js/dialog-patch.js" type="text/javascript"></script>-->
         <script src="../js/iframes-controllers.js" type="text/javascript"></script>
         <script src="../js/jquery-ui.min.js" type="text/javascript"></script>
         <script src="../js/jquery.autocomplete.js" type="text/javascript"></script>
@@ -51,23 +51,31 @@
         <script src="../js/jquery.fileupload-uix.js" type="text/javascript"></script>
         <script src="../js/jquery.fileupload.js" type="text/javascript"></script>-->
         <script src="../js/jquery.js?<%=Math.random()%>" type="text/javascript"></script>
-        <script src="../js/jquery.tablesorter.js" type="text/javascript"></script>
-        <script src="../js/jquery.tablesorter.pager.js" type="text/javascript"></script>
-        <script src="../js/jquery.tabs.js" type="text/javascript"></script>
-        <script src="../js/jquery.uniform.js" type="text/javascript"></script>
+<!--        <script src="../js/jquery.tablesorter.js" type="text/javascript"></script>
+        <script src="../js/jquery.tablesorter.pager.js" type="text/javascript"></script>-->
+        <!--<script src="../js/jquery.tabs.js" type="text/javascript"></script>-->
+        <!--<script src="../js/jquery.uniform.js" type="text/javascript"></script>-->
         <script src="../js/jquery.validate.js" type="text/javascript"></script>
-        <script src="../js/timepicki.js" type="text/javascript"></script>
+        <!--<script src="../js/timepicki.js" type="text/javascript"></script>-->
         <script src="../ckeditor/ckeditor.js" type="text/javascript"></script>
+        
+        <script src="../js/dataTables/bootstrap-table.js" type="text/javascript"></script>
+        <link href="../js/dataTables/bootstrap-table.css" rel="stylesheet" type="text/css"/>
+        <!--<script src="../js/dataTables/locale/bootstrap-table-es-MX.js" type="text/javascript"></script>-->
+        <link href="http://cdn.datatables.net/1.10.3/css/jquery.dataTables.css" rel="stylesheet" type="text/css">
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="http://cdn.datatables.net/1.10.3/js/jquery.dataTables.min.js"></script>
+      
     </head>
     <body  id="cprincipal" style="min-height: 500px; padding: 5px 5px;">
         <style> 
-            footer{ background-color:#009fe1; color:#fff; overflow:hidden; }
+            footer{ background-color:#fff; color:#fff; overflow:hidden; }
             @media (min-width: 980px) { footer{ width:1000px; margin:0 auto; } } 
             @media (max-width: 979px) { footer{ width:98%; margin:0 auto; } } 
         </style> 
         <script type="text/javascript">
             $('#cprincipal').css('height', ($(window).height() - 15) + 'px');
-            $('#shell').css('width', ($(window).width() - 20) + 'px')
+            $('#shell').css('width', ($(window).width() - 20) + 'px');
         </script>
         <div class="body-bg">
             <div class="shell" id="shell" >  

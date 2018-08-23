@@ -59,7 +59,7 @@
 %>
 <html>
     <head>
-        <title>IDIGER - Registro Unico de Desartres </title>
+        <title>IDIGER - Registro Unico de Damnificados </title>
         <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
     </head>
     <body>

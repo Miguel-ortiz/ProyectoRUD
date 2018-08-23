@@ -18,7 +18,7 @@
 
 <%
     String separador = System.getProperty("file.separator");
-    String ruta = application.getRealPath("") + separador + "Logs" + separador;
+    String ruta = application.getRealPath("") + separador + "Log" + separador;
     SesionLogs.Logs.setRuta(ruta + "Logs_");
     SesionLogs.Errores.setRuta(ruta + "Errores_");
 
@@ -60,7 +60,7 @@
 <!--Nueva interfaz -->
 <div class="boxes">
     <div class="left_contenttwo">
-        <legend>Mis Opciones</legend>
+        <legend class="text-center">Administrador</legend>
         <!--%
             try {
                 FuncionalidadUsuarioDAO FuncionalidadUsuarioDAO = new FuncionalidadUsuarioDAO();
@@ -80,46 +80,39 @@
                             return false;"  alt="Evento " title="Evento " class="btn btn-info"/>
                     </div>
                 </div>-->
-        <div class="form-group">
-            <div class="input-group center-block derecho">  
-                <input type="submit" value="Registro" onclick="location.href = '../registro/for_reg_ctr.jsp';
-                        return false;"  alt="Registro " title="Registro " class="btn btn-info"/>
+        <center>
+            <div class="form-group text-center">
+                    <input type="image" value="Registro" onclick="location.href = '../registro/for_reg_ctr.jsp';
+                        return false;"  alt="Registro " title="Registro " class="btn btn-info"
+                        src="../images/Registro.png"/>
+               
+                <input type="image" value="Persona Hogar" onclick="location.href = '../personas/per_reg_ctr.jsp';
+                        return false;"  alt="Persona Hogar" title="Persona Hogar " class="btn btn-info" 
+                        src="../images/PersonaHogar.png"/>
+
+                <input type="image" value="Bienes Inmuebles" onclick="location.href = '../bienes/bie_reg_ctr.jsp';
+                        return false;"  alt="Bienes Inmuebles Afectados" title="Bienes Inmuebles Afectados " class="btn btn-info" 
+                        src="../images/BienesInmuebles.png"/>
+
+                <input type="image" value="Cultivos Perdidos" onclick="location.href = '../cultivos/cul_reg_ctr.jsp';
+                        return false;"  alt="Cultivos Perdidos" title="Cultivos Perdidos " class="btn btn-info" 
+                        src="../images/CultivosPerdidos.png"/>
+
+                <input type="image" value="Pecuarios Perdidos" onclick="location.href = '../pecuarios/pec_reg_ctr.jsp';
+                        return false;"  alt="Pecuarios Perdidos" title="Pecuarios Perdidos " class="btn btn-info" 
+                        src="../images/PecuniariosPerdidos.png"/>
             </div>
-        </div>
-        <div class="form-group">
-            <div class="input-group center-block derecho">  
-                <input type="submit" value="Persona Hogar" onclick="location.href = '../personas/per_reg_ctr.jsp';
-                        return false;"  alt="Persona Hogar" title="Persona Hogar " class="btn btn-info" />
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="input-group center-block derecho">  
-                <input type="submit" value="Bienes Inmuebles" onclick="location.href = '../bienes/bie_reg_ctr.jsp';
-                        return false;"  alt="Bienes Inmuebles Afectados" title="Bienes Inmuebles Afectados " class="btn btn-info" />
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="input-group center-block derecho">  
-                <input type="submit" value="Cultivos Perdidos" onclick="location.href = '../cultivos/cul_reg_ctr.jsp';
-                        return false;"  alt="Cultivos Perdidos" title="Cultivos Perdidos " class="btn btn-info" />
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="input-group center-block derecho">  
-                <input type="submit" value="Pecuarios Perdidos" onclick="location.href = '../pecuarios/pec_reg_ctr.jsp';
-                        return false;"  alt="Pecuarios Perdidos" title="Pecuarios Perdidos " class="btn btn-info" />
-            </div>
-        </div>
-        <div class="form-group">
-                <div class="input-group center-block">  
-                    <input type="submit" onclick="location.href = '../menu/eve_eve_ctr.jsp'; return false;" value="Volver" alt="VOLVER" title="VOLVER" class="btn btn-primary"/>
-                </div>
-            </div>
+            <!--        <div class="form-group">
+                            <div class="input-group center-block">  
+                                <input type="submit" onclick="location.href = '../menu/eve_eve_bus.jsp'; return false;" value="Volver" alt="VOLVER" title="VOLVER" class="btn btn-primary"/>
+                            </div>
+                        </div>-->
+        </center>
         <div class="cl">&nbsp;</div>
-        <div class="izquierdo">
-            <input type="image" onclick="location.href = 'eve_eve_ctr.jsp'; return false;" 
-                   alt="SALIR DE LA APLICACIÓN" title="SALIR DE LA APLICACIÓN">
-        </div>
+<!--        <div class="izquierdo">
+          <input type="submit" value="Salir Aplicación" onclick="location.href = '../';
+                        return false;"  alt="Salir Aplicación" title="Salir Aplicación" class="btn btn-danger" />
+        </div>-->
     </div>
 
     <div class="cl">&nbsp;</div>

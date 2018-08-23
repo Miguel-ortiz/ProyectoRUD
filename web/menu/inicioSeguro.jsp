@@ -10,12 +10,12 @@
 
 <html>
     <head>
-        <title>IDIGER - Registro Unico de Desartres </title>
+        <title>IDIGER - Registro Unico de Damnificados </title>
         <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
     </head>
     <frameset rows="0,*" framespacing="0" frameborder="NO" border="0" onUnload="MM_openBrWindow('/menu/fueraC.jsp', 'Fuera', 'width=260, height=105, screenX=0, screenY=0, top=0, left=0, scrollbars=no, status=no, resizable=no')" >
         <frame name="topFrame" scrolling="NO" noresize />
-            <frame name="mainFrame" src="<%= pagina%>" />
+            <frame name="mainFrame" src="<%=pagina%>" />
     </frameset>
     <noframes> 
         <body bgcolor="#FFFFFF" text="#000000" > 

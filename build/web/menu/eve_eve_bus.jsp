@@ -16,33 +16,29 @@
 
 <fmt:setBundle basename="proyecto.idiger.gov.co.utils.labels"/>
 
-<div class="form-group">
-    <div class="input-group center-block">  
-        <input type="submit" onclick="location.href = '../ProyectoRUD/'; return false;" value="Volver" alt="VOLVER" title="VOLVER" class="btn btn-primary"/>
-    </div>
-</div>
 <form class="form" method="post" action="" autocomplete="off" id="FormAplication" name="FormAplication">
-    <div class="form-group col-sm-5">
-        <div class="input-group">
-            <div class="input-group-addon">
-                <fmt:message key='label.usuario' /> 
-            </div>
-            <input id="usuario_txt" name="usuario_txt" class="form-control"  type="text">
-        </div>
-    </div>
-    <div class="form-group col-sm-5">
-        <div class="input-group">
-            <div class="input-group-addon">
-                <fmt:message key='label.clave' /> 
-            </div>
-            <input id="pass_txt" name="pass_txt" class="form-control"  type="text">
-        </div>
-    </div>
     <center>
+        <div class="form-group col-sm-6">
+            <div class="input-group">
+                <div class="input-group-addon">
+                    <fmt:message key='label.usuario' /> 
+                </div>
+                <input id="usuario_txt" name="usuario_txt" class="form-control"  type="text">
+            </div>
+        </div>
+        <div class="form-group col-sm-6">
+            <div class="input-group">
+                <div class="input-group-addon">
+                    <fmt:message key='label.clave' /> 
+                </div>
+                <input id="pass_txt" name="pass_txt" class="form-control"  type="text">
+            </div>
+        </div>
         <div class="form-group">
             <div class="input-group center-block">  
                 <input type="hidden" value="3" id="op" name="op" /> 
-                <input type="submit" value="Guardar Persona" class="btn btn-primary" onclick="location.href = '../ProyectoRUD/evento/eve_eve_ctr.jsp';" />
+                <input type="submit" value="Ingresar " class="btn btn-primary" onclick="location.href = '../ProyectoRUD/evento/eve_eve_ctr.jsp';" />
+                <input type="submit" onclick="location.href = '../'; return false;" value="Volver" alt="Volver" title="Volver" class="btn btn-primary"/>
             </div>
         </div>
     </center>

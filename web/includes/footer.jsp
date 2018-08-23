@@ -7,9 +7,9 @@
   Funcion del Archivo :
 --%>
  </div>
-        <footer id="footer" role="contentinfo"> 
-            <div class="container text-left" style="background-color:#073e65; line-height:0.6; padding:15px; padding-right:20px; width:96.5%; margin:0; ">
-                <div class="row text-left" style="margin:0; padding:0">
+        <footer id="footer"> 
+            <div class="container" style="background-color:#073e65; line-height:0.6; padding:15px; padding-right:20px; width:96.5%; margin:0; ">
+<!--                <div class="row text-left" style="margin:0; padding:0">
                     <div class="right_content" style="line-height:0.8; margin:0; padding:0">
                         <h4>Alcaldía Mayor de Bogotá</h4> <p>Cra 8 No. 10-65 - Bogotá</p>
                         <p>Teléfono: (57 1) 3813000</p> <p>Horario de Atención al público</p>
@@ -25,17 +25,18 @@
                         <p>Conmutador: (57 1) 4292800</p>
                         <p><a href="mailto:idiger@idiger.gov.co" style="color:#fff">idiger@idiger.gov.co</a></p> 
                         <p>Horario de Atención al público:</p>
-                        <p>Lunes a Viernes de 7:30am a 4:30pm</p>
+                        
                     </div>
-                </div> 
+                </div>-->
+<p>Todos los derechos reservados por IDIGER </p>
             </div> 
-            <div class="container text-center" style="padding:5px; width:96.5%; margin:0;">
+<!--            <div class="container text-center" style="padding:5px; width:96.5%; margin:0;">
                 <div class="row " style="margin:0; padding:0">
                     <div class="copyright span10" style="margin:0; padding:0"> 
                         <p>Copyright 2016. Todos los derechos reservados por IDIGER</p>
                     </div> 
                 </div>
-            </div> 
+            </div> -->
         </footer>
         <!--END PAGE SOURCE-->
     </div></div>

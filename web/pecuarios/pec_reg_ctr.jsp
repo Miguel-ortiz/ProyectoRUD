@@ -46,6 +46,7 @@
         switch (opcion) {
             case 0:
                 listarpecuario();
+                consultar();
                 path = "/pecuarios/pec_reg_ini.jsp";
                 procesa = false;
                 break;
@@ -93,4 +94,16 @@
                 _session.setAttribute("dato", "si");
             }
         }
+    
+    void consultar() throws UnsupportedEncodingException, Exception {
+
+        RegistroRUDDAO dDAO = new RegistroRUDDAO(MiUsuarioVO.getUsua_id());
+        List<PecuariosRUDVO> pecuariosRUDVOs = new PecuariosRUDDAO(MiUsuarioVO.getUsua_id()).ListarPecuario(dDAO .NumRegistro().getRegi_id());
+        _session.removeAttribute("pecuariosRUDVOs");
+        _session.removeAttribute("datos");
+        if (pecuariosRUDVOs != null) {
+            _session.setAttribute("pecuariosRUDVOs", pecuariosRUDVOs);
+            _session.setAttribute("datos", "si");
+        }
+    }
 %>
